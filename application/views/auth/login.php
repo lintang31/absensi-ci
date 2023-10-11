@@ -27,13 +27,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgb(130, 106, 251);
+    background: violet;
 }
 
 .container {
     position: relative;
     max-width: 700px;
-    width: 100%;
+    width: 60%;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -139,11 +139,11 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: rgb(130, 106, 251);
+    background: violet;
 }
 
 .form button:hover {
-    background: rgb(88, 56, 250);
+    background: violet;
 }
 
 /*Responsive*/
@@ -161,36 +161,27 @@ body {
 <body>
     <section class="container">
         <header>Login Form</header>
-        <form action="#" class="form">
-            <div class="input-box">
+        <form method="post" action="<?php echo base_url('Auth/aksi_login'); ?>" class="form">
+            <!-- <div class="input-box">
                 <label>Username</label>
                 <input type="text" placeholder="usename" required />
-            </div>
+            </div> -->
 
             <div class="input-box">
                 <label>Email </label>
-                <input type="text" placeholder="Email" required />
+                <input type="text" placeholder="Email" name="email" id="email" required />
+            </div>
+            <div class="input-box">
+                <label>Password </label>
+                <input type="Password" placeholder="Password" name="password" id="password" required />
             </div>
 
-            <div class="column">
-                <div class="input-box">
-                    <label>Nama Depan</label>
-                    <input type="text" placeholder="Nama Depan" required />
-                </div>
-                <div class="input-box">
-                    <label>Nama Belakang</label>
-                    <input type="text" placeholder="Nama Belakang " required />
-                </div>
-                <div class="input-box">
-                    <label>Password</label>
-                    <input type="password" placeholder="password " required />
-                </div>
-                <div class="input-box">
-                    <label>role</label>
-                    <input type="text" placeholder="role " required />
-                </div>
             </div>
             <button>Submit</button>
+            <div class="register_link">
+                <p>sudah punya akun?<a href='<?php echo base_url('auth/register'); ?>' style=color:black> register</a>
+                </p>
+            </div>
         </form>
     </section>
 </body>

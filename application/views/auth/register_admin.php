@@ -160,38 +160,33 @@ body {
 
 <body>
     <section class="container">
-        <header>Register Karyawan Form</header>
-        <form action="<?php echo base_url(); ?>Auth/aksi_register" method="post" class="form">
+        <header>Register Admin Form</header>
+        <form action="#" class="form">
             <div class="input-box">
                 <label>Username</label>
-                <input type="text" name="username" placeholder="usename" required />
+                <input type="text" placeholder="usename" required />
             </div>
 
             <div class="input-box">
                 <label>Email </label>
-                <input type="text" name="email" placeholder="Email" required />
+                <input type="text" placeholder="Email" required />
             </div>
             <div class="input-box">
                 <label>Nama Depan </label>
-                <input type="text" name="nama_depan" placeholder="Nama  Depan" required />
+                <input type="text" placeholder="Nama  Depan" required />
             </div>
             <div class="input-box">
                 <label>Nama Belakang </label>
-                <input type="text" name="nama_belakang" placeholder="Nama Belakang" required />
+                <input type="text" placeholder="Nama Belakang" required />
             </div>
             <div class="input-box">
                 <label>Password </label>
-                <input type="Password" name="password" placeholder="Password" required />
+                <input type="Password" placeholder="Password" required />
             </div>
             </div>
             <button>Submit</button>
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:black> Login</a>
-                </p>
-            </div>
-            <div class="register_link">
-                <p>Gang Sebelah boss!<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:black>
-                        register Admin</a>
+                <p>Akun sebelah boss!<a href='<?php echo base_url('auth/register'); ?>' style=color:black> register</a>
                 </p>
             </div>
         </form>
