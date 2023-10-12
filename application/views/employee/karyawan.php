@@ -9,7 +9,7 @@
 
 <body><?php $this->load->view('./component/sidebar_karyawan'); ?>
 
-    karyawan TURU
+    pppppp
 </body>
 
 </html>

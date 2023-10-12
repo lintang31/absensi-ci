@@ -20,14 +20,14 @@
 }
 
 :root {
-    --white-color: #fff;
-    --blue-color: #4070f4;
-    --grey-color: #707070;
-    --grey-color-light: #aaa;
+    --white-color: black;
+    --blue-color: white;
+    --grey-color: white;
+    --grey-color-light: white;
 }
 
 body {
-    background-color: #e7f2fd;
+    background-color: grey;
     transition: all 0.5s ease;
 }
 
@@ -362,6 +362,12 @@ body.dark {
                         <a href="<?php echo base_url(
                             'employee/tambah_absen'
                         ); ?>" class="nav_link sublink">Absensi</a>
+                    </ul>
+
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
+                            'employee/izin'
+                        ); ?>" class="nav_link sublink">izin</a>
                     </ul>
 
                     <ul class="menu_items submenu">

@@ -60,7 +60,7 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h6 class="card-title">Jumlah Masuk</h6>
-                        <h1>10</h1>
+                        <h1>20</h1>
                     </div>
                 </div>
             </div>
@@ -68,32 +68,20 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h6 class="card-title">Jumlah Izin</h6>
-                        <h1>2</h1>
+                        <h1>10</h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h6 class="card-title">Total</h6>
-                        <h1>2</h1>
+                        <h6 class="card-title">Total Keseluruhan</h6>
+                        <h1>10</h1>
                     </div>
                 </div>
             </div>
         </div>
         <table class="table table-striped mt-5">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Kegiatan</th>
-                    <th scope="col">Tanggal</th>
-                    <th scope="col">Jam Masuk</th>
-                    <th scope="col">Jam Pulang</th>
-                    <th scope="col">Keterangan</th>
-                    <th scope="col">Pulang</th>
-                    <th scope="col text-center">Aksi</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
 

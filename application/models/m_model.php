@@ -129,6 +129,27 @@ class M_model extends CI_Model
             return null; // Jika tidak ada data yang ditemukan
         }
     }
+
+    public function updateStatusPulang($id) {
+        // Define the data to be updated
+        $data = array(
+            'jam_pulang' => date('Y-m-d H:i:s') // You can adjust the format as needed
+        );
+    
+        // Update the database table where id matches
+        $this->db->where('id', $id);
+        $this->db->update('absensi', $data);
+    
+        // Check if the update was successful
+        if ($this->db->affected_rows() > 0) {
+            return true; // Successful update
+        } else {
+            return false; // Update failed
+        }
+    }
+    
+
+    
 }
 
 ?>

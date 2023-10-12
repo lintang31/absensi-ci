@@ -42,20 +42,60 @@
                 <td><?php echo $row['kegiatan']; ?></td>
                 <td><?php echo $row['date']; ?></td>
                 <td><?php echo $row['jam_masuk']; ?></td>
-                <td><?php echo $row['jam_pulang']; ?></td>
                 <td>
-
+                    <span id="jam-pulang-<?php echo $i; ?>">
+                        <?php echo $row['jam_pulang']; ?>
+                    </span>
                 </td>
-                <td><?php echo $row['status']; ?></td>
-                <td><button type="submit" class="btn btn-warning"><i></i>Edit</button>
-                    <button type="submit" class="btn btn-danger"><i></i>Hapus</button>
+                <td>
+                    <?php if (!empty($row['keterangan_izin'])): ?>
+                    <p>Izin</p>
+                    <?php else: ?>
+                    <p>Masuk</p>
+                    <?php endif; ?>
+                </td>
+                <td>
+                    <a href="javascript:setHomeTime(<?php echo $i; ?>);"
+                        class="btn btn-warning <?php echo !empty($row['keterangan_izin']) ? 'disabled' : ''; ?>">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </td>
+
+                <td><a href="<?php echo base_url('employee/update_absen/') .
+                        $row['id']; ?>" type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a> |
+                    <button type="button" class="btn btn-success"><i class="fa-solid fa-trash"></i></button>
             </tr>
-            <?php $i++;
-                // Tingkatkan nomor urut
-                ?>
+            <?php $i++; ?>
             <?php endforeach; ?>
         </tbody>
     </table>
+
 </body>
+<script>
+function setHomeTime(id) {
+    // Create an XMLHttpRequest object for making an AJAX request
+    var xhr = new XMLHttpRequest();
+
+    // Define the request parameters
+    xhr.open('GET', '<?php echo base_url("employee/updateStatusPulang/" . $i); ?>', true);
+
+    // Set up the callback function for when the request is complete
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // The request was successful, and you can handle the response if needed
+            var response = xhr.responseText;
+            console.log(response); // You can log or process the response here
+        }
+    };
+
+    // Send the request
+    xhr.send();
+}
+</script>
+
+
+
 
 </html>
