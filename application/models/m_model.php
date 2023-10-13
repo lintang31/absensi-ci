@@ -131,23 +131,26 @@ class M_model extends CI_Model
     }
 
     public function updateStatusPulang($id) {
-        // Define the data to be updated
+        date_default_timezone_set('Asia/Jakarta');
         $data = array(
-            'jam_pulang' => date('Y-m-d H:i:s') // You can adjust the format as needed
+            'jam_pulang' => date('Y-m-d H:i:s'),
+            'status' => 'true'
         );
-    
-        // Update the database table where id matches
+
+        // Dapatkan data jam masuk sebelum memperbarui
+        $this->db->select('jam_masuk');
+        $this->db->where('id', $id);
+        $query = $this->db->get('absensi');
+        $row = $query->row();
+        $jam_masuk = $row->jam_masuk; // Dapatkan nilai jam masuk sebelum memperbarui
+
+        // Tetapkan nilai jam masuk yang sama ke dalam data sebelum memperbarui
+        $data['jam_masuk'] = $jam_masuk;
+
+        // Lakukan pembaruan data dengan tetap mempertahankan jam masuk yang sama
         $this->db->where('id', $id);
         $this->db->update('absensi', $data);
-    
-        // Check if the update was successful
-        if ($this->db->affected_rows() > 0) {
-            return true; // Successful update
-        } else {
-            return false; // Update failed
-        }
     }
-    
 
     
 }

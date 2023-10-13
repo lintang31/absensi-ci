@@ -55,17 +55,27 @@
                     <?php endif; ?>
                 </td>
                 <td>
-                    <a href="javascript:setHomeTime(<?php echo $i; ?>);"
-                        class="btn btn-warning <?php echo !empty($row['keterangan_izin']) ? 'disabled' : ''; ?>">
+                <td>
+                    <?php if (!empty($row['keterangan_izin'])): ?>
+                    <p>Izin</p>
+                    <?php else: ?>
+                    <a href="javascript:pulang(<?php echo $row['id']; ?>);" class="btn btn-warning">
                         <i class="fa-solid fa-house"></i>
                     </a>
+                    <?php endif; ?>
                 </td>
 
-                <td><a href="<?php echo base_url('employee/update_absen/') .
+
+                </td>
+
+                <td><a href="<?php echo base_url('employee/ubah_absensi/') .
                         $row['id']; ?>" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-pen-to-square"></i>
-                    </a> |
-                    <button type="button" class="btn btn-success"><i class="fa-solid fa-trash"></i></button>
+                    </a>
+                    <button onClick="hapus(<?php echo $row['id']; ?>)" type="button" class="btn btn-danger"><i
+                            class="fa-solid fa-trash"></i></button>
+
+
             </tr>
             <?php $i++; ?>
             <?php endforeach; ?>
@@ -74,28 +84,54 @@
 
 </body>
 <script>
-function setHomeTime(id) {
-    // Create an XMLHttpRequest object for making an AJAX request
+function pulang(id) {
     var xhr = new XMLHttpRequest();
-
-    // Define the request parameters
-    xhr.open('GET', '<?php echo base_url("employee/updateStatusPulang/" . $i); ?>', true);
-
-    // Set up the callback function for when the request is complete
+    xhr.open('GET', '<?php echo base_url("employee/pulang/") ?>' + id, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            // The request was successful, and you can handle the response if needed
-            var response = xhr.responseText;
-            console.log(response); // You can log or process the response here
+            var response = JSON.parse(xhr.responseText);
+
+            if (response.status === 'true') {
+                // Tombol "Pulang" berubah menjadi "Batal Pulang"
+                var pulangButton = document.querySelector('a.btn[data-id="' + id + '"]');
+                pulangButton.textContent = 'Batal Pulang';
+                pulangButton.className = 'btn btn-danger';
+                pulangButton.setAttribute('onclick', 'batalPulang(' + id + ');');
+
+                // Update jam pulang dalam tabel
+                var jamPulangCell = document.getElementById('jam-pulang-' + id);
+                jamPulangCell.textContent = response.jam_pulang;
+            }
         }
     };
+    xhr.send();
+}
 
-    // Send the request
+function batalPulang(id) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '<?php echo base_url("employee/batal_pulang/") ?>' + id, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+
+            if (response.status === 'false') {
+                // Tombol "Batal Pulang" berubah kembali menjadi "Pulang"
+                var batalPulangButton = document.querySelector('a.btn[data-id="' + id + '"]');
+                batalPulangButton.textContent = 'Pulang';
+                batalPulangButton.className = 'btn btn-warning';
+                batalPulangButton.setAttribute('onclick', 'pulang(' + id + ');');
+
+                // Hapus jam pulang dalam tabel
+                var jamPulangCell = document.getElementById('jam-pulang-' + id);
+                jamPulangCell.textContent = '';
+            }
+        }
+    };
     xhr.send();
 }
 </script>
 
 
-
+<?php ?>
 
 </html>

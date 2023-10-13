@@ -23,7 +23,7 @@
             <h3>Absensi</h3>
             <br>
             <label for="Kegiatan" class="form-label">Kegiatan :</label>
-            <textarea class="form-control" aria-label="With textarea" name="kegiatan"></textarea>>
+            <textarea class="form-control" aria-label="With textarea" name="kegiatan"></textarea>
             <button type="submit" class="btn btn-warning mt-4">Masuk</button>
         </form>
     </div>
