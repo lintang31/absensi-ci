@@ -74,7 +74,7 @@ class Auth extends CI_Controller{
             }
 
             // Simpan data ke dalam database
-            $this->User_model->registerUser($data);
+            $this->user_model->registerUser($data);
 
             // Redirect pengguna ke halaman login atau halaman lain yang sesuai
             redirect('auth');

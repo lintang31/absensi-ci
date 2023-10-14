@@ -8,6 +8,7 @@ class Employee extends CI_Controller
         parent::__construct();
         // Load model dan library yang diperlukan
         $this->load->model('Absensi_model');
+        $this->load->model('m_model');
         $this->load->library('form_validation');
         // if($this->session->userdata('logged_in')!=true || $this->session->userdata('role') != 'karyawan') {
         //     redirect(base_url().'auth');
@@ -136,7 +137,6 @@ class Employee extends CI_Controller
     }
     
     
-    
 
     public function history()
     {
@@ -145,14 +145,15 @@ class Employee extends CI_Controller
         $this->load->view('employee/history', $data);
     }
 
-    public function hapus($id) {
-        $this->load->model('Absensi_model');
-    
-        // Hapus data berdasarkan ID
-        $this->Absensi_model->deleteAbsensi($id);
-    
-        // Setelah menghapus data, arahkan kembali ke halaman "history"
-        redirect('employee/history');
-    }
+   
+public function hapus($id)
+{
+    $this->m_model->delete('absensi', 'id', $id);
+    $this->session->set_flashdata(
+        'berhasil_menghapus',
+        'Data berhasil dihapus.'
+    );
+    redirect(base_url('employee/history'));
+}
     
 }

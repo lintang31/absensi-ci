@@ -5,5 +5,6 @@ class Izin_model extends CI_Model
     {
         $this->db->insert('absensi', $data); // Gantilah 'izin' dengan nama tabel yang sesuai
     }
+    
 }
 ?>
