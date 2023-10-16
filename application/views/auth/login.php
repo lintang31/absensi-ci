@@ -164,7 +164,7 @@ body {
 <body>
     <section class="container">
         <header>Login Form</header>
-        <form method="post" action="<?php echo base_url('Auth/aksi_login'); ?>" class="form">
+        <form method="post" action="<?php echo base_url('auth/process_login'); ?>" class="form">
             <!-- <div class="input-box">
                 <label>Username</label>
                 <input type="text" placeholder="usename" required />
@@ -178,11 +178,16 @@ body {
                 <label>Password </label>
                 <input type="Password" placeholder="Password" name="password" id="password" required />
             </div>
-
+            <button type="submit">Submit</button>
             </div>
-            <button>Submit</button>
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth/register'); ?>' style=color:black> register</a>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_karyawan'); ?>' style=color:black>
+                        register</a>
+                </p>
+            </div>
+            <div class="register_link">
+                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:black>
+                        register Admin</a>
                 </p>
             </div>
         </form>

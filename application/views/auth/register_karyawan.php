@@ -164,10 +164,10 @@ body {
 <body>
     <section class="container">
         <header>Register Karyawan Form</header>
-        <form action="<?php echo base_url(); ?>Auth/aksi_register" method="post" class="form">
+        <form action="<?php echo base_url('auth/process_register_karyawan'); ?>" method="post" class="form">
             <div class="input-box">
                 <label>Username</label>
-                <input type="text" name="username" placeholder="usename" required />
+                <input type="text" name="username" placeholder="username" required />
             </div>
 
             <div class="input-box">
@@ -187,14 +187,9 @@ body {
                 <input type="Password" name="password" placeholder="Password" required />
             </div>
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
             <div class="register_link">
                 <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:black> Login</a>
-                </p>
-            </div>
-            <div class="register_link">
-                <p>Gang Sebelah boss!<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:black>
-                        register Admin</a>
                 </p>
             </div>
         </form>

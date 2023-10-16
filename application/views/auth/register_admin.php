@@ -164,32 +164,32 @@ body {
 <body>
     <section class="container">
         <header>Register Admin Form</header>
-        <form action="#" class="form">
+        <form action="<?php echo base_url('auth/process_register_admin'); ?>" method="post" class="form">
             <div class="input-box">
                 <label>Username</label>
-                <input type="text" placeholder="usename" required />
+                <input type="text" name="username" placeholder="username" required />
             </div>
 
             <div class="input-box">
                 <label>Email </label>
-                <input type="text" placeholder="Email" required />
+                <input type="text" name="email" placeholder="Email" required />
             </div>
             <div class="input-box">
                 <label>Nama Depan </label>
-                <input type="text" placeholder="Nama  Depan" required />
+                <input type="text" name="nama_depan" placeholder="Nama  Depan" required />
             </div>
             <div class="input-box">
                 <label>Nama Belakang </label>
-                <input type="text" placeholder="Nama Belakang" required />
+                <input type="text" name="nama_belakang" placeholder="Nama Belakang" required />
             </div>
             <div class="input-box">
                 <label>Password </label>
-                <input type="Password" placeholder="Password" required />
+                <input type="Password" name="password" placeholder="Password" required />
             </div>
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
             <div class="register_link">
-                <p>Akun sebelah boss!<a href='<?php echo base_url('auth/register'); ?>' style=color:black> register</a>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:black> Login</a>
                 </p>
             </div>
         </form>

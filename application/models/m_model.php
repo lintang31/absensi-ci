@@ -7,9 +7,8 @@ class M_model extends CI_Model
         return $this->db->get($table);
     }
 
-    function getwhere($table, $data)
-    {
-        return $this->db->get_where($table, $data);
+    function getwhere($table,$data){
+        return $this->db->get_where($table,$data);
     }
 
     public function delete($table, $field, $id)
