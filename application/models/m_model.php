@@ -40,6 +40,16 @@ class M_model extends CI_Model
         return $this->db->affected_rows();
     }
 
+    public function get_karyawan_rows()
+    {
+        return $this->db->get_where('user', ['role' => 'karyawan'])->num_rows();
+    }
+
+    public function get_absensi_count()
+    {
+        return $this->db->count_all_results('absensi');
+    }
+
     public function get_siswa_foto_by_id($id_siswa)
     {
         $this->db->select('foto');

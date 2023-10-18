@@ -20,7 +20,7 @@
 }
 
 :root {
-    --white-color: black;
+    --white-color: #17594A;
     --blue-color: white;
     --grey-color: white;
     --grey-color-light: white;
@@ -326,6 +326,14 @@ body.dark {
             <i class="bx bx-menu" id="sidebarOpen"></i>
             Absensi Admin
         </div>
+
+        <div class="navbar_content">
+            <i class="bi bi-grid"></i>
+            <a href="<?php echo base_url('Admin/profil'); ?>">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                    alt="" class="profile" />
+            </a>
+        </div>
     </nav>
 
     <!-- sidebar -->
@@ -350,19 +358,19 @@ body.dark {
 
                     <ul class="menu_items submenu">
                         <a href="<?php echo base_url(
-                            'admin/rekap_harian'
+                            'admin/rekapPerHari'
                         ); ?>" class="nav_link sublink">Rekap Harian</a>
                     </ul>
 
                     <ul class="menu_items submenu">
                         <a href="<?php echo base_url(
-                            'admin/rekap_mingguan'
+                            'admin/rekapPerMinggu'
                         ); ?>" class="nav_link sublink">Rekap Mingguan</a>
                     </ul>
 
                     <ul class="menu_items submenu">
                         <a href="<?php echo base_url(
-                            'admin/rekap_bulanan'
+                            'admin/rekapPerBulan'
                         ); ?>" class="nav_link sublink">Rekap Bulanan</a>
                     </ul>
                 </li><!-- Sidebar Open / Close -->

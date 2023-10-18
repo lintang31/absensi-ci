@@ -20,7 +20,7 @@
 }
 
 :root {
-    --white-color: black;
+    --white-color: #17594A;
     --blue-color: white;
     --grey-color: white;
     --grey-color-light: white;

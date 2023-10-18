@@ -82,14 +82,17 @@ class Employee extends CI_Controller
 
     public function save_absensi()
     {
+        $id_karyawan = $this->session->userdata('id');
         date_default_timezone_set('Asia/Jakarta');
-        $current_datetime = date('Y-m-d H:i:s');
+        $current_date = date('Y-m-d');
+        $current_time = date('H:i:s');
 
         $data = [
+            'id_karyawan' => $id_karyawan,
             'kegiatan' => $this->input->post('kegiatan'),
-            'date' => $current_datetime,
-            'jam_masuk' => $current_datetime,
-            'jam_pulang' => $current_datetime,
+            'date' => $current_date,
+            'jam_masuk' => $current_time,
+            'jam_pulang' => '00:00:00',
         ];
 
         $this->load->model('Absensi_model');
@@ -97,11 +100,6 @@ class Employee extends CI_Controller
 
         redirect('employee/history');
     }
-
-    // public function ubah_absensi()
-    // {
-    //     $this->load->view('employee/ubah_absensi');
-    // }
 
     public function ubah_absensi($id)
     {
@@ -130,11 +128,6 @@ class Employee extends CI_Controller
             redirect(base_url('employee/ubah_absensi/'.$this->input->post('id')));
         }
     }
-
-    
-    
-    
-
     
     public function izin()
     {
@@ -143,8 +136,8 @@ class Employee extends CI_Controller
 
     public function simpan_izin()
     {
+        $id_karyawan = $this->session->userdata('id');
         $keterangan_izin = $this->input->post('keterangan');
-
         $this->load->model('Izin_model');
 
         $data = [
@@ -167,7 +160,7 @@ class Employee extends CI_Controller
         if ($absensi['status'] == 'false') {
             date_default_timezone_set('Asia/Jakarta');
             $data = array(
-                'jam_pulang' => date('Y-m-d H:i:s'),
+                'jam_pulang' => date('H:i:s'),
                 'status' => 'true'
             );
         }
@@ -183,8 +176,6 @@ class Employee extends CI_Controller
         echo json_encode($response);
     }
     
-    
-
     public function history()
     {
         $this->load->model('Absensi_model');
