@@ -180,6 +180,7 @@ body {
             </div>
             <button type="submit">Submit</button>
             </div>
+
             <div class="register_link">
                 <p>sudah punya akun?<a href='<?php echo base_url('auth/register_karyawan'); ?>' style=color:black>
                         register</a>
