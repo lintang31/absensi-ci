@@ -22,7 +22,7 @@
         <form method="post" action="<?= base_url('employee/simpan_izin') ?>">
             <h3>Izin</h3>
             <br>
-            <label for="Kegiatan" class="form-label">Kegiatan :</label>
+            <label for="Kegiatan" class="form-label">Silahkan Tulis Keterangan :</label>
             <textarea class="form-control" aria-label="With textarea" name="keterangan_izin"></textarea>
             <button type="submit" class="btn btn-warning mt-4">Izin</button>
         </form>
