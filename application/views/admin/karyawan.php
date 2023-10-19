@@ -29,7 +29,6 @@ table {
 .btn-success {
     background-color: #28a745;
     color: #fff;
-
 }
 
 @media (max-width: 768px) {
@@ -41,8 +40,6 @@ table {
     .table {
         margin-left: 10%;
     }
-
-
 }
 </style>
 

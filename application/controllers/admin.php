@@ -289,7 +289,7 @@ class Admin extends CI_Controller
 
 	public function export_harian()
     {
-		$tanggal = $this->input->get('tanggal');
+		$tanggal = $this->input->get('date');
     	
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -382,7 +382,7 @@ class Admin extends CI_Controller
             $sheet->setCellValue('D' . $numrow, $data->date);
             $sheet->setCellValue('E' . $numrow, $data->jam_masuk);
             $sheet->setCellValue('F' . $numrow, $data->jam_pulang);
-            $sheet->setCellValue('G' . $numrow, $data->keterangan_izin);
+            $sheet->setCellValue('G' . $numrow, !$data->keterangan_izin ? 'Masuk' : $data->keterangan_izin );
 
             $sheet->getStyle('A' . $numrow)->applyFromArray($style_row);
             $sheet->getStyle('B' . $numrow)->applyFromArray($style_row);
