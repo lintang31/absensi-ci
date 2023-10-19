@@ -11,8 +11,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
-    margin: 0;
-    padding: 0;
+    margin-top: 80px;
+    margin-right: 10px;
+    padding: 0px;
     margin-left: 275px;
 }
 

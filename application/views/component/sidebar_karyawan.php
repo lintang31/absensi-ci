@@ -331,60 +331,57 @@ body.dark {
         <div class="navbar_content">
             <i class="bi bi-grid"></i>
             <a href="<?php echo base_url('employee/profil'); ?>">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
-                    alt="" class="profile" />
+                <img src="https://www.androidponsel.com/wp-content/uploads/2023/04/profil-kosong.jpg" alt=""
+                    class="profile" />
             </a>
         </div>
     </nav>
 
     <!-- sidebar -->
     <nav class="sidebar">
-        <div class="menu_content">
-            <ul class="menu_items">
-                <div class="menu_title menu_dahsboard"></div>
-                <li class="item">
-                    <div href="#" class="nav_link submenu_item">
-                        <span class="navlink_icon">
-                            <i class="bi bi-bank2"></i>
-                        </span>
-                        <span class="navlink">Home</span>
-                        <i class="bi bi-bank2"></i>
-                    </div>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+        <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+                <i class="bi bi-bank2"></i>
+            </span>
+            <span class="navlink">Home</span>
+            <i class="bi bi-bank2"></i>
+        </div>
+
+        <ul class="menu_items submenu">
+            <a href="<?php echo base_url(
                             'employee/dashboard'
                         ); ?>" class="nav_link sublink">Dashboard</a>
-                    </ul>
+        </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+        <ul class="menu_items submenu">
+            <a href="<?php echo base_url(
                             'employee/tambah_absen'
                         ); ?>" class="nav_link sublink">Absensi</a>
-                    </ul>
+        </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+        <ul class="menu_items submenu">
+            <a href="<?php echo base_url(
                             'employee/izin'
                         ); ?>" class="nav_link sublink">izin</a>
-                    </ul>
+        </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+        <ul class="menu_items submenu">
+            <a href="<?php echo base_url(
                             'employee/history'
                         ); ?>" class="nav_link sublink">History</a>
-                    </ul>
-                </li><!-- Sidebar Open / Close -->
-                <div class="bottom_content">
-                    <div class="bottom expand_sidebar">
-                        <span> Expand</span>
-                        <i class='bx bx-log-in'></i>
-                    </div>
-                    <div class="bottom collapse_sidebar">
-                        <span> Log out</span>
-                        <i class='bx bx-log-out'></i>
-                    </div>
-                </div>
+        </ul>
+        </li><!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+            <div class="bottom expand_sidebar">
+                <span> Buka</span>
+
+            </div>
+            <div class="bottom collapse_sidebar">
+                <span> Tutup</span>
+
+            </div>
+        </div>
         </div>
     </nav>
     <!-- JavaScript -->

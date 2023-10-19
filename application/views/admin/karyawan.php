@@ -51,14 +51,14 @@ table {
 
             <table class="table">
                 <thead>
+                    <th>
+                        <a href="<?php echo base_url('admin/export_karyawan')?>"><button type="submit"
+                                class="btn btn-success">export</button></a>
+                    </th>
                     <tr>
                         <th>ID</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>
-                            <a href="<?php echo base_url('admin/export_karyawan')?>"><button type="submit"
-                                    class="btn btn-success">export</button></a>
-                        </th>
                     </tr>
                 </thead>
                 <tbody>

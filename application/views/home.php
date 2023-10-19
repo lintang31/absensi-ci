@@ -58,8 +58,8 @@
                 <div class="col-md-4">
                     <div class="">
                         <div class="container">
-                            <img src="https://cdn.pnghd.pics/data/431/gambar-logo-tengkorak-21.jpg" alt="Logo"
-                                class="mb-4 logo">
+                            <img src="https://cdn.pixabay.com/photo/2020/03/19/18/41/office-4948345_960_720.png"
+                                alt="Logo" class="mb-4 logo">
                             <hr class="text-light">
                             <div class="d-flex justify-content-center">
                                 <div class="text-center mx-1">

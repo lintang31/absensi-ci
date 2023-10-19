@@ -522,8 +522,8 @@ class Admin extends CI_Controller
             $sheet->setCellValue('D' . $numrow, $row->date);
             $sheet->setCellValue('E' . $numrow, $row->jam_masuk);
             $sheet->setCellValue('F' . $numrow, $row->jam_pulang);
-            $sheet->setCellValue('G' . $numrow, $row->keterangan_izin);
-
+            $sheet->setCellValue('G' . $numrow, !$row->keterangan_izin ? 'Masuk' : $row->keterangan_izin );
+            
             $sheet->getStyle('A' . $numrow)->applyFromArray($style_row);
             $sheet->getStyle('B' . $numrow)->applyFromArray($style_row);
             $sheet->getStyle('C' . $numrow)->applyFromArray($style_row);
