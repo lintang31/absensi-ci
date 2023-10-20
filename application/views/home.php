@@ -66,10 +66,7 @@
                                     <a href="<?php echo base_url('auth/register_karyawan'); ?>" type="submit"
                                         class="btn btn-success custom-button">Daftar Karyawan</a>
                                 </div>
-                                <div class="text-center mx-1">
-                                    <a href="<?php echo base_url('auth/register_admin'); ?>" type="submit"
-                                        class="btn btn-danger custom-button">Daftar Admin</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>

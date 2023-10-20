@@ -125,7 +125,7 @@ form {
                         <table class="table" data-month="<?= $data['bulan'] ?>">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>Tanggal</th>
                                     <th>Masuk</th>

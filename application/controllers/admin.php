@@ -95,14 +95,12 @@ class Admin extends CI_Controller
         $sheet->setCellValue('A3', 'No');
         $sheet->setCellValue('B3', 'Username');
         $sheet->setCellValue('C3', 'Email');
-        $sheet->setCellValue('D3', 'Nama Depan');
-        $sheet->setCellValue('E3', 'Nama Belakang');
+      
 
         $sheet->getStyle('A3')->applyFromArray($style_col);
         $sheet->getStyle('B3')->applyFromArray($style_col);
         $sheet->getStyle('C3')->applyFromArray($style_col);
-        $sheet->getStyle('D3')->applyFromArray($style_col);
-        $sheet->getStyle('E3')->applyFromArray($style_col);
+      
 
         $role = 'karyawan';
 		$karyawan_data = $this->admin_model->get_data_by_role($role)->result();
@@ -113,14 +111,12 @@ class Admin extends CI_Controller
             $sheet->setCellValue('A' . $numrow, $no);
             $sheet->setCellValue('B' . $numrow, $data->username);
             $sheet->setCellValue('C' . $numrow, $data->email);
-            $sheet->setCellValue('D' . $numrow, $data->nama_depan);
-            $sheet->setCellValue('E' . $numrow, $data->nama_belakang);
+   
 
             $sheet->getStyle('A' . $numrow)->applyFromArray($style_row);
             $sheet->getStyle('B' . $numrow)->applyFromArray($style_row);
             $sheet->getStyle('C' . $numrow)->applyFromArray($style_row);
-            $sheet->getStyle('D' . $numrow)->applyFromArray($style_row);
-            $sheet->getStyle('E' . $numrow)->applyFromArray($style_row);
+        
 
             $no++;
             $numrow++;
@@ -129,8 +125,7 @@ class Admin extends CI_Controller
         $sheet->getColumnDimension('A')->setWidth(5);
         $sheet->getColumnDimension('B')->setWidth(25);
         $sheet->getColumnDimension('C')->setWidth(25);
-        $sheet->getColumnDimension('D')->setWidth(20);
-        $sheet->getColumnDimension('E')->setWidth(30);
+   
 
         $sheet->getDefaultRowDimension()->setRowHeight(-1);
 

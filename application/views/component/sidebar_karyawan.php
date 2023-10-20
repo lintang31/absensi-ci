@@ -339,49 +339,52 @@ body.dark {
 
     <!-- sidebar -->
     <nav class="sidebar">
+        <div class="menu_content">
+            <ul class="menu_items">
+                <div class="menu_title menu_dahsboard"></div>
+                <li class="item">
+                    <div href="#" class="nav_link submenu_item">
+                        <span class="navlink_icon">
+                            <i class="bi bi-bank2"></i>
+                        </span>
+                        <span class="navlink">Home</span>
+                        <i class="bi bi-bank2"></i>
+                    </div>
 
-        <div href="#" class="nav_link submenu_item">
-            <span class="navlink_icon">
-                <i class="bi bi-bank2"></i>
-            </span>
-            <span class="navlink">Home</span>
-            <i class="bi bi-bank2"></i>
-        </div>
-
-        <ul class="menu_items submenu">
-            <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'employee/dashboard'
                         ); ?>" class="nav_link sublink">Dashboard</a>
-        </ul>
+                    </ul>
 
-        <ul class="menu_items submenu">
-            <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'employee/tambah_absen'
                         ); ?>" class="nav_link sublink">Absensi</a>
-        </ul>
+                    </ul>
 
-        <ul class="menu_items submenu">
-            <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'employee/izin'
                         ); ?>" class="nav_link sublink">izin</a>
-        </ul>
+                    </ul>
 
-        <ul class="menu_items submenu">
-            <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'employee/history'
                         ); ?>" class="nav_link sublink">History</a>
-        </ul>
-        </li><!-- Sidebar Open / Close -->
-        <div class="bottom_content">
-            <div class="bottom expand_sidebar">
-                <span> Buka</span>
+                    </ul>
+                </li><!-- Sidebar Open / Close -->
+                <div class="bottom_content">
+                    <div class="bottom expand_sidebar">
+                        <span> Buka</span>
 
-            </div>
-            <div class="bottom collapse_sidebar">
-                <span> Tutup</span>
+                    </div>
+                    <div class="bottom collapse_sidebar">
+                        <span> Tutup</span>
 
-            </div>
-        </div>
+                    </div>
+                </div>
         </div>
     </nav>
     <!-- JavaScript -->

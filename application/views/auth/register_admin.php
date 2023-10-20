@@ -185,11 +185,12 @@ body {
             <div class="input-box">
                 <label>Password </label>
                 <input type="Password" name="password" placeholder="Password" required />
+                *Password Minimal 8
             </div>
             </div>
             <button type="submit">Submit</button>
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:black> Login</a>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:blue> Login</a>
                 </p>
             </div>
         </form>

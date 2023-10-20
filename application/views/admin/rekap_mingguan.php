@@ -5,81 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/responsive.css'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    margin: 0;
-    padding: 0;
-    margin-left: 275px;
-}
-
-.main {
-    background-color: #fff;
-    padding: 20px;
-
-}
-
-.card {
-    border: 1px solid #ccc;
-    margin-top: 90px;
-}
-
-.card-header {
-    background-color: #f0f0f0;
-    padding: 10px;
-}
-
-.card-body {
-    padding: 20px;
-
-}
-
-.input-group {
-    margin-bottom: 10px;
+h2 {
+    margin-top: 100px;
     margin-left: 285px;
 }
 
-.btn-success {
-    background-color: #28a745;
-    color: #fff;
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin-top: 80px;
+    margin-right: 10px;
+    padding: 0px;
+    margin-left: 275px;
 }
 
-.btn-warning {
-    background-color: #28a745;
-    color: #fff;
-
+form {
+    width: 50%;
+    margin-left: 285px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-
+.exp {
+    margin-top: 8px;
 }
 
-th,
-td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-
+.table {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 285px;
 }
 
-th {
-    background-color: #f2f2f2;
+@media (max-width: 768px) {
+    form {
+        margin-left: 10%;
+    }
 
-}
+    h2 {
+        margin-left: 10%;
+    }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.text-center {
-    text-align: center;
-
+    .table {
+        margin-left: 10%;
+        margin-top: 10px;
+    }
 }
 </style>
 
@@ -117,7 +90,7 @@ tr:nth-child(even) {
                         <h5 class="text-center">Tidak ada data diminggu ini ini.</h5>
                         <p class="text-center">Silahkan pilih Minggu lain.</p>
                         <?php else: ?>
-                        <table class="table">
+                        <table class="table table-responsive table-striped table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>

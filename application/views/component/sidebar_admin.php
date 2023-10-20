@@ -340,38 +340,39 @@ body.dark {
     <nav class="sidebar">
         <div class="menu_content">
             <ul class="menu_items">
-
-                <div href="#" class="nav_link submenu_item">
-                    <span class="navlink_icon">
+                <div class="menu_title menu_dahsboard"></div>
+                <li class="item">
+                    <div href="#" class="nav_link submenu_item">
+                        <span class="navlink_icon">
+                            <i class="bi bi-bank2"></i>
+                        </span>
+                        <span class="navlink">Home</span>
                         <i class="bi bi-bank2"></i>
-                    </span>
-                    <span class="navlink">Home</span>
-                    <i class="bi bi-bank2"></i>
-                </div>
+                    </div>
 
-                <ul class="menu_items submenu">
-                    <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'admin/karyawan'
                         ); ?>" class="nav_link sublink">Karyawan</a>
-                </ul>
+                    </ul>
 
-                <ul class="menu_items submenu">
-                    <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'admin/rekapPerHari'
                         ); ?>" class="nav_link sublink">Rekap Harian</a>
-                </ul>
+                    </ul>
 
-                <ul class="menu_items submenu">
-                    <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'admin/rekapPerMinggu'
                         ); ?>" class="nav_link sublink">Rekap Mingguan</a>
-                </ul>
+                    </ul>
 
-                <ul class="menu_items submenu">
-                    <a href="<?php echo base_url(
+                    <ul class="menu_items submenu">
+                        <a href="<?php echo base_url(
                             'admin/rekapPerBulan'
                         ); ?>" class="nav_link sublink">Rekap Bulanan</a>
-                </ul>
+                    </ul>
                 </li><!-- Sidebar Open / Close -->
                 <div class="bottom_content">
                     <div class="bottom expand_sidebar">

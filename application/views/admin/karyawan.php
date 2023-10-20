@@ -40,6 +40,55 @@ table {
     .table {
         margin-left: 10%;
     }
+
+    @media screen and (max-width: 1225px) and (min-width: 1045px) {
+        .priority-5 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1045px) and (min-width: 835px) {
+        .priority-5 {
+            display: none;
+        }
+
+        .priority-4 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 565px) and (min-width: 300px) {
+        .priority-5 {
+            display: none;
+        }
+
+        .priority-4 {
+            display: none;
+        }
+
+        .priority-3 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .priority-5 {
+            display: none;
+        }
+
+        .priority-4 {
+            display: none;
+        }
+
+        .priority-3 {
+            display: none;
+        }
+
+        .priority-2 {
+            display: none;
+        }
+
+    }
 }
 </style>
 
@@ -49,16 +98,18 @@ table {
         <div class="col-md-9">
             <h2>Daftar Karyawan</h2>
 
-            <table class="table">
+            <table class="table" cellspacing="0" width="100%">
                 <thead>
                     <th>
                         <a href="<?php echo base_url('admin/export_karyawan')?>"><button type="submit"
                                 class="btn btn-success">export</button></a>
                     </th>
+
                     <tr>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>Email</th>
+                        <th class="ID" width="15%">No</th>
+                        <th class="Nama" width="15%">Nama</th>
+                        <th class="Email" width="15%">Email</th>
+
                     </tr>
                 </thead>
                 <tbody>

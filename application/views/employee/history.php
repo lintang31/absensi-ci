@@ -16,8 +16,17 @@
 .table {
     width: 78%;
     margin-top: 100px;
-    margin-left: 280px;
+    margin-left: 270px;
 }
+
+@media (max-width: 768px) {
+
+
+    .table {
+        margin-left: 10%;
+    }
+}
+</style>
 </style>
 
 <body>

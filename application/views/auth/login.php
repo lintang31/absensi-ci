@@ -182,12 +182,12 @@ body {
             </div>
 
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_karyawan'); ?>' style=color:black>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_karyawan'); ?>' style=color:blue>
                         register</a>
                 </p>
             </div>
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:black>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:blue>
                         register Admin</a>
                 </p>
             </div>
