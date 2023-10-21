@@ -76,7 +76,7 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <h6 class="card-title">Total Keseluruhan</h6>
-                        <h1>10</h1>
+                        <h1>30</h1>
                     </div>
                 </div>
             </div>

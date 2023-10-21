@@ -27,8 +27,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(37, 26, 31);
+    background: -moz-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#251a1f", endColorstr="#ebebeb", GradientType=1);
 }
 
 .container {
@@ -140,13 +146,25 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(37, 26, 31);
+    background: -moz-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#251a1f", endColorstr="#ebebeb", GradientType=1);
 }
 
 .form button:hover {
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(37, 26, 31);
+    background: -moz-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    background: radial-gradient(circle, rgba(37, 26, 31, 1) 0%, rgba(235, 235, 235, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#251a1f", endColorstr="#ebebeb", GradientType=1);
 }
 
 /*Responsive*/
@@ -185,7 +203,7 @@ body {
             <div class="input-box">
                 <label>Password </label>
                 <input type="Password" name="password" placeholder="Password" required />
-                *Password Minimal 8
+                *Password Minimal 8 Karakter
             </div>
             </div>
             <button type="submit">Submit</button>

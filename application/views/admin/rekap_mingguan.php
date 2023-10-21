@@ -12,8 +12,8 @@
 </head>
 <style>
 h2 {
-    margin-top: 100px;
-    margin-left: 285px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 body {
@@ -22,22 +22,22 @@ body {
     margin-top: 80px;
     margin-right: 10px;
     padding: 0px;
-    margin-left: 275px;
+    margin-left: 130px;
 }
 
 form {
     width: 50%;
-    margin-left: 285px;
+    margin-left: 60 px;
 }
 
 .exp {
-    margin-top: 8px;
+    margin-top: 100px;
 }
 
 .table {
     width: 60%;
-    margin-top: 20px;
-    margin-left: 285px;
+    margin-top: 5px;
+    margin-left: 130px;
 }
 
 @media (max-width: 768px) {
@@ -78,6 +78,7 @@ form {
                         </div>
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Filter</button>
+                            <br>
                             <button type="submit" name="submit" class="btn btn-sm btn-success"
                                 formaction="<?php echo base_url('admin/export_mingguan')?>">Export</button>
                         </div>

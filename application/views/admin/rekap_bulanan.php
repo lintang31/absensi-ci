@@ -14,7 +14,7 @@
 .table {
     width: 60%;
     margin-top: 40px;
-    margin-left: 285px;
+    margin-left: 30px;
 }
 
 body {
@@ -23,21 +23,21 @@ body {
     margin-top: 80px;
     margin-right: 10px;
     padding: 0px;
-    margin-left: 275px;
+    margin-left: 130px;
 }
 
 h2 {
     margin-top: 100px;
-    margin-left: 285px;
+    margin-left: 30px;
 }
 
 form {
     width: 50%;
-    margin-left: 285px;
+    margin-left: 10px;
 }
 
 .isi {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 

@@ -13,7 +13,7 @@
 <style>
 h2 {
     margin-top: 100px;
-    margin-left: 285px;
+    margin-left: 130px;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 
 form {
     width: 50%;
-    margin-left: 285px;
+    margin-left: 130px;
 }
 
 .exp {
@@ -37,7 +37,7 @@ form {
 .table {
     width: 60%;
     margin-top: 20px;
-    margin-left: 285px;
+    margin-left: 130px;
 }
 
 @media (max-width: 768px) {
@@ -69,9 +69,9 @@ form {
                         <div class="d-flex justify-content-between">
                             <input type="date" class="form-control" id="date" name="date"
                                 value="<?php echo isset($_GET['date']) ? $_GET['date'] : ''; ?>">
+                            <button type="submit" class="btn btn-success">Filter</button>
                             <button type="submit" name="submit" class="btn btn-sm btn-success"
                                 formaction="<?php echo base_url('admin/export_harian')?>">Export</button>
-                            <button type="submit" class="btn btn-success">Filter</button>
                         </div>
                     </form>
                     <br>
