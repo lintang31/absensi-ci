@@ -5,6 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -171,15 +174,18 @@ body.dark {
     list-style: none;
 }
 
-.navlink_icon {
+.nav_link {
     position: relative;
-    font-size: 22px;
-    min-width: 50px;
+    font-size: 16px;
+    min-width: 10px;
     line-height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 6px;
+    margin-right: 10px;
+    /* Atur jarak antara ikon dan teks di sini sesuai kebutuhan Anda */
 }
+
 
 .navlink_icon::before {
     content: "";
@@ -296,6 +302,10 @@ body.dark {
     display: none;
 }
 
+
+
+
+
 @media screen and (max-width: 768px) {
     #sidebarOpen {
         font-size: 25px;
@@ -319,6 +329,7 @@ body.dark {
 }
 </style>
 
+
 <body>
     <!-- navbar -->
     <nav class="navbar">
@@ -341,39 +352,30 @@ body.dark {
     <nav class="sidebar">
         <div class="menu_content">
             <ul class="menu_items">
-                <div class="menu_title menu_dahsboard"></div>
-                <li class="item">
-                    <div href="#" class="nav_link submenu_item">
-                        <span class="navlink_icon">
-                            <i class="bi bi-bank2"></i>
-                        </span>
-                        <span class="navlink">Home</span>
-                        <i class="bi bi-bank2"></i>
-                    </div>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
-                            'employee/dashboard'
-                        ); ?>" class="nav_link sublink">Dashboard</a>
-                    </ul>
+                <ul class="">
+                    <a href="<?php echo base_url( 
+                            'employee/dashboard' 
+                        ); ?>" class="nav_link sublink"><i class="fa-solid fa-mug-hot"></i>Dashboard</a>
+                </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+                <ul class="">
+                    <a href="<?php echo base_url(
                             'employee/tambah_absen'
-                        ); ?>" class="nav_link sublink">Absensi</a>
-                    </ul>
+                        ); ?>" class="nav_link sublink"><i class="fa-solid fa-address-book"></i>Absensi</a>
+                </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+                <ul class="">
+                    <a href="<?php echo base_url(
                             'employee/izin'
-                        ); ?>" class="nav_link sublink">izin</a>
-                    </ul>
+                        ); ?>" class="nav_link sublink"><i class="fa-regular fa-address-book"></i>izin</a>
+                </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
+                <ul class="">
+                    <a href="<?php echo base_url(
                             'employee/history'
-                        ); ?>" class="nav_link sublink">History</a>
-                    </ul>
+                        ); ?>" class="nav_link sublink"><i class="fa-regular fa-camera-retro"></i>History</a>
+                </ul>
                 </li><!-- Sidebar Open / Close -->
                 <div class="bottom_content">
                     <div class="bottom expand_sidebar">

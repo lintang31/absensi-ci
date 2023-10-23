@@ -8,7 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--<title>Registration Form in HTML CSS</title>-->
     <!---Custom CSS File--->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <style>
 /* Import Google font - Poppins */
@@ -168,6 +171,14 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#251a1f", endColorstr="#ebebeb", GradientType=1);
 }
 
+.form .input-box .password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 /*Responsive*/
 @media screen and (max-width: 500px) {
     .form .column {
@@ -195,8 +206,9 @@ body {
             </div>
             <div class="input-box">
                 <label>Password </label>
-                <input type="Password" placeholder="Password" name="password" id="password" required />
+                <input type="password" placeholder="Password" name="password" id="password" required />
             </div>
+
             <button type="submit">Submit</button>
             </div>
 
@@ -205,11 +217,23 @@ body {
                         register</a>
                 </p>
             </div>
-            <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth/register_admin'); ?>' style=color:blue>
-                        register Admin</a>
-                </p>
-            </div>
+            <!-- <script>
+            function togglePassword() {
+                var passwordField = document.getElementById("password");
+                var icon = document.querySelector(".toggle-password");
+
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                } else {
+                    passwordField.type = "password";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                }
+            }
+            </script> -->
+
         </form>
     </section>
 </body>

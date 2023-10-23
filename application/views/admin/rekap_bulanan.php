@@ -12,7 +12,7 @@
 </head>
 <style>
 .table {
-    width: 60%;
+    width: 100%;
     margin-top: 40px;
     margin-left: 30px;
 }
@@ -33,8 +33,9 @@ h2 {
 
 form {
     width: 50%;
-    margin-left: 10px;
+    margin-left: 200px;
 }
+
 
 .isi {
     margin-left: 60px;
@@ -108,7 +109,7 @@ form {
                                     Desember</option>
                             </select>
 
-                            <button type="submit" class="btn btn-success">Filter</button>
+                            <button type="submit" class="btn btn-success mx-2">Filter</button>
                             <button type="submit" name="submit" class="btn btn-sm btn-success"
                                 formaction="<?php echo base_url('admin/export_bulanan')?>">Export</button>
                         </div>

@@ -213,10 +213,14 @@ public function akun()
             $password_baru = $this->input->post('password_baru');
             $konfirmasi_password = $this->input->post('konfirmasi_password');
             $email = $this->input->post('email');
+            $nama_depan = $this->input->post('nama_depan');
+            $nama_belakang = $this->input->post('nama_belakang');
             $username = $this->input->post('username');
             $data = [
                 'foto' => 'User.png',
                 'email' => $email,
+                'nama_depan' => $nama_depan,
+                'nama_belakang' => $nama_belakang,
                 'username' => $username,
             ];
             if (!empty($password_baru)) {
@@ -227,7 +231,7 @@ public function akun()
                         'message',
                         'Password baru dan Konfirmasi password harus sama'
                     );
-                    redirect(base_url('employee/akun'));
+                    redirect(base_url('employee/profil'));
                 }
             }
             $this->session->set_userdata($data);
@@ -236,9 +240,9 @@ public function akun()
             ]);
 
             if ($update_result) {
-                redirect(base_url('employee/akun'));
+                redirect(base_url('employee/profil'));
             } else {
-                redirect(base_url('employee/akun'));
+                redirect(base_url('employee/profil'));
             }
         } else {
             $password_baru = $this->input->post('password_baru');
@@ -258,7 +262,7 @@ public function akun()
                         'message',
                         'Password baru dan Konfirmasi password harus sama'
                     );
-                    redirect(base_url('admin/akun'));
+                    redirect(base_url('admin/profil'));
                 }
             }
             $this->session->set_userdata($data);
@@ -267,11 +271,12 @@ public function akun()
             ]);
 
             if ($update_result) {
-                redirect(base_url('employee/akun'));
+                redirect(base_url('employee/profil'));
             } else {
-                redirect(base_url('employee/akun'));
+                redirect(base_url('employee/profil'));
             }
         }
     }
+
     
 }

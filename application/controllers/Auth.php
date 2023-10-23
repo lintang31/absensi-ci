@@ -74,7 +74,7 @@ class Auth extends CI_Controller {
                 'email' => $this->input->post('email'),
                 'password' => $hashed_password,
                 'role' => 'karyawan',
-                'image' => $this->input->post('user.png')
+               
             ];
 
             $this->db->insert('user', $data);
@@ -99,7 +99,7 @@ class Auth extends CI_Controller {
                 'email' => $this->input->post('email'),
                 'password' => $hashed_password,
                 'role' => 'admin',
-                'image' => $this->input->post('user.png')
+        
             ];
 
             $this->db->insert('user', $data);

@@ -734,7 +734,7 @@ public function akun()
 {
     if ($this->session->userdata('id')) {
         $user_id = $this->session->userdata('id');
-        $data['user'] = $this->User_model->getUserById($user_id);
+        $data['user'] = $this->user_model->getUserById($user_id);
 
         $this->load->view('admin/akun', $data);
     } else {

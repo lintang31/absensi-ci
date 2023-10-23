@@ -25,9 +25,10 @@ body {
     margin-left: 130px;
 }
 
+
 form {
-    width: 50%;
-    margin-left: 60 px;
+    width: 100%;
+    margin-left: 200px;
 }
 
 .exp {
@@ -35,9 +36,9 @@ form {
 }
 
 .table {
-    width: 60%;
-    margin-top: 5px;
-    margin-left: 130px;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 30px;
 }
 
 @media (max-width: 768px) {
@@ -66,20 +67,23 @@ form {
                 </div>
                 <div class="card-body">
                     <form action="<?= base_url('admin/rekapPerMinggu'); ?>" method="get" class="row g-3">
-                        <div class="input-group">
-                            <span class="input-group-text">Tanggal awal</span>
-                            <input type="date" class="form-control" id="start_date" name="start_date"
-                                value="<?php echo isset($_GET['start_date']) ? $_GET['start_date'] : ''; ?>">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text">Tanggal awal</span>
+                                <input type="date" class="form-control" id="start_date" name="start_date"
+                                    value="<?php echo isset($_GET['start_date']) ? $_GET['start_date'] : ''; ?>">
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-text">Tanggal akhir</span>
-                            <input type="date" class="form-control" id="end_date" name="end_date"
-                                value="<?php echo isset($_GET['end_date']) ? $_GET['end_date'] : ''; ?>">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text">Tanggal akhir</span>
+                                <input type="date" class="form-control" id="end_date" name="end_date"
+                                    value="<?php echo isset($_GET['end_date']) ? $_GET['end_date'] : ''; ?>">
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-success">Filter</button>
-                            <br>
-                            <button type="submit" name="submit" class="btn btn-sm btn-success"
+                            <button type="submit" name="submit" class="btn btn-success "
                                 formaction="<?php echo base_url('admin/export_mingguan')?>">Export</button>
                         </div>
                     </form>

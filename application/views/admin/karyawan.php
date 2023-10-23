@@ -26,68 +26,19 @@ table {
     margin-left: 29%;
 }
 
-.btn-success {
-    background-color: #28a745;
-    color: #fff;
-}
-
 @media (max-width: 768px) {
     h2 {
         margin-top: 80px;
         margin-left: 10%;
     }
 
-    .table {
+    .exp {
         margin-left: 10%;
     }
 
-    @media screen and (max-width: 1225px) and (min-width: 1045px) {
-        .priority-5 {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 1045px) and (min-width: 835px) {
-        .priority-5 {
-            display: none;
-        }
-
-        .priority-4 {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 565px) and (min-width: 300px) {
-        .priority-5 {
-            display: none;
-        }
-
-        .priority-4 {
-            display: none;
-        }
-
-        .priority-3 {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 300px) {
-        .priority-5 {
-            display: none;
-        }
-
-        .priority-4 {
-            display: none;
-        }
-
-        .priority-3 {
-            display: none;
-        }
-
-        .priority-2 {
-            display: none;
-        }
-
+    .table {
+        margin-top: 10px;
+        margin-left: 10%;
     }
 }
 </style>
@@ -97,19 +48,19 @@ table {
     <div class="comtainer-fluid">
         <div class="col-md-9">
             <h2>Daftar Karyawan</h2>
-
-            <table class="table" cellspacing="0" width="100%">
+            <a class="exp btn btn-success mb-1" href="<?= base_url(
+                'admin/export_daftar_karyawan'
+            ) ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-cursor-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
+                </svg></a>
+            <table class="table">
                 <thead>
-                    <th>
-                        <a href="<?php echo base_url('admin/export_karyawan')?>"><button type="submit"
-                                class="btn btn-success">export</button></a>
-                    </th>
-
                     <tr>
-                        <th class="ID" width="15%">No</th>
-                        <th class="Nama" width="15%">Nama</th>
-                        <th class="Email" width="15%">Email</th>
-
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -124,8 +75,6 @@ table {
                     <?php endforeach; ?>
                 </tbody>
             </table>
-
-
         </div>
     </div>
     <!-- Tambahkan tag-script Anda di sini, seperti JavaScript yang dibutuhkan -->

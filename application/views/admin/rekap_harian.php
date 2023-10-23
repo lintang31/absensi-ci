@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <style>
-h2 {
-    margin-top: 100px;
-    margin-left: 130px;
+.table {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 30px;
 }
 
 body {
@@ -22,12 +23,12 @@ body {
     margin-top: 80px;
     margin-right: 10px;
     padding: 0px;
-    margin-left: 275px;
+    margin-left: 267px;
 }
 
 form {
     width: 50%;
-    margin-left: 130px;
+    margin-left: 200px;
 }
 
 .exp {
@@ -35,9 +36,9 @@ form {
 }
 
 .table {
-    width: 60%;
-    margin-top: 20px;
-    margin-left: 130px;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 30px;
 }
 
 @media (max-width: 768px) {
@@ -69,8 +70,8 @@ form {
                         <div class="d-flex justify-content-between">
                             <input type="date" class="form-control" id="date" name="date"
                                 value="<?php echo isset($_GET['date']) ? $_GET['date'] : ''; ?>">
-                            <button type="submit" class="btn btn-success">Filter</button>
-                            <button type="submit" name="submit" class="btn btn-sm btn-success"
+                            <button type="submit" class="btn btn-success mx-2">Filter</button>
+                            <button type="submit" name="submit" class="btn btn-sm btn-success "
                                 formaction="<?php echo base_url('admin/export_harian')?>">Export</button>
                         </div>
                     </form>

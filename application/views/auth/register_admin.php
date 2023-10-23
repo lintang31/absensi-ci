@@ -9,6 +9,9 @@
     <!--<title>Registration Form in HTML CSS</title>-->
     <!---Custom CSS File--->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
 /* Import Google font - Poppins */
@@ -59,6 +62,8 @@ body {
 }
 
 .form .input-box {
+    position: relative;
+    /* Tambahkan ini */
     width: 100%;
     margin-top: 20px;
 }
@@ -91,6 +96,16 @@ body {
 
 .form .gender-box {
     margin-top: 20px;
+}
+
+/* Tambahkan gaya untuk ikon mata */
+.form .input-box .toggle-password {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #707070;
 }
 
 .gender-box h3 {
@@ -201,9 +216,9 @@ body {
                 <input type="text" name="nama_belakang" placeholder="Nama Belakang" required />
             </div>
             <div class="input-box">
-                <label>Password </label>
-                <input type="Password" name="password" placeholder="Password" required />
-                *Password Minimal 8 Karakter
+                <label>*Password Minimal 8 Karakter </label>
+                <input type="Password" placeholder="Password" name="password" id="password" required />
+                <span class="fa fa-fw fa-eye-slash field-icon toggle-password" onclick="togglePassword()"></span>
             </div>
             </div>
             <button type="submit">Submit</button>
@@ -211,6 +226,22 @@ body {
                 <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:blue> Login</a>
                 </p>
             </div>
+            <script>
+            function togglePassword() {
+                var passwordField = document.getElementById("password");
+                var icon = document.querySelector(".toggle-password");
+
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                } else {
+                    passwordField.type = "password";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                }
+            }
+            </script>
         </form>
     </section>
 </body>

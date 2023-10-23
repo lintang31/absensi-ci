@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<!-- Coding by CodingNepal || www.codingnepalweb.com -->
-<html lang="en">
+    <!DOCTYPE html>
+    <!-- Coding by CodingNepal || www.codingnepalweb.com -->
+    <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<style>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <style>
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
@@ -171,15 +174,18 @@ body.dark {
     list-style: none;
 }
 
-.navlink_icon {
+.nav_link {
     position: relative;
-    font-size: 22px;
-    min-width: 50px;
-    line-height: 40px;
+    font-size: 16px;
+    min-width: 10px;
+    line-height: 30px;
     display: inline-block;
     text-align: center;
     border-radius: 6px;
+    margin-right: 10px;
+    /* Atur jarak antara ikon dan teks di sini sesuai kebutuhan Anda */
 }
+
 
 .navlink_icon::before {
     content: "";
@@ -296,6 +302,10 @@ body.dark {
     display: none;
 }
 
+
+
+
+
 @media screen and (max-width: 768px) {
     #sidebarOpen {
         font-size: 25px;
@@ -317,120 +327,114 @@ body.dark {
         left: -100%;
     }
 }
-</style>
+    </style>
 
-<body>
-    <!-- navbar -->
-    <nav class="navbar">
-        <div class="logo_item">
-            <i class="bx bx-menu" id="sidebarOpen"></i>
-            Absensi Admin
-        </div>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="logo_item">
+                <i class="bx bx-menu" id="sidebarOpen"></i>
+                Absensi Admin
+            </div>
 
-        <div class="navbar_content">
-            <i class="bi bi-grid"></i>
-            <a href="<?php echo base_url('Admin/profil'); ?>">
-                <img src="https://www.androidponsel.com/wp-content/uploads/2023/04/profil-kosong.jpg" alt=""
-                    class="profile" />
-            </a>
-        </div>
-    </nav>
+            <div class="navbar_content">
+                <i class="bi bi-grid"></i>
+                <a href="<?php echo base_url('Admin/profil'); ?>">
+                    <img src="https://www.androidponsel.com/wp-content/uploads/2023/04/profil-kosong.jpg" alt=""
+                        class="profile" />
+                </a>
+            </div>
+        </nav>
 
-    <!-- sidebar -->
-    <nav class="sidebar">
-        <div class="menu_content">
-            <ul class="menu_items">
-                <div class="menu_title menu_dahsboard"></div>
-                <li class="item">
-                    <div href="#" class="nav_link submenu_item">
-                        <span class="navlink_icon">
-                            <i class="bi bi-bank2"></i>
-                        </span>
-                        <span class="navlink">Home</span>
-                        <i class="bi bi-bank2"></i>
-                    </div>
+        <!-- sidebar -->
+        <nav class="sidebar">
+            <div class="menu_content">
+                <ul class="menu_items">
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
-                            'admin/karyawan'
-                        ); ?>" class="nav_link sublink">Karyawan</a>
-                    </ul>
+            </div>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
-                            'admin/rekapPerHari'
-                        ); ?>" class="nav_link sublink">Rekap Harian</a>
-                    </ul>
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/karyawan'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-users"></i>Karyawan</a>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
-                            'admin/rekapPerMinggu'
-                        ); ?>" class="nav_link sublink">Rekap Mingguan</a>
-                    </ul>
+            </ul>
 
-                    <ul class="menu_items submenu">
-                        <a href="<?php echo base_url(
-                            'admin/rekapPerBulan'
-                        ); ?>" class="nav_link sublink">Rekap Bulanan</a>
-                    </ul>
-                </li><!-- Sidebar Open / Close -->
-                <div class="bottom_content">
-                    <div class="bottom expand_sidebar">
-                        <span> Buka</span>
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/rekapPerHari'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar-days"></i>Rekap Harian</a>
+            </ul>
 
-                    </div>
-                    <div class="bottom collapse_sidebar">
-                        <span>Tutup</span>
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/rekapPerMinggu'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar"></i>Rekap Mingguan</a>
+            </ul>
 
-                    </div>
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/rekapPerBulan'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar-week"></i>Rekap Bulanan</a>
+            </ul>
+            </li><!-- Sidebar Open / Close -->
+            <div class="bottom_content">
+                <div class="bottom expand_sidebar">
+                    <span> Buka</span>
+
                 </div>
-        </div>
-    </nav>
-    <!-- JavaScript -->
-    <script>
-    const body = document.querySelector("body");
-    const sidebar = document.querySelector(".sidebar");
-    const submenuItems = document.querySelectorAll(".submenu_item");
-    const sidebarOpen = document.querySelector("#sidebarOpen");
-    const sidebarClose = document.querySelector(".collapse_sidebar");
-    const sidebarExpand = document.querySelector(".expand_sidebar");
-    sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
+                <div class="bottom collapse_sidebar">
+                    <span>Tutup</span>
 
-    sidebarClose.addEventListener("click", () => {
-        sidebar.classList.add("close", "hoverable");
-    });
-    sidebarExpand.addEventListener("click", () => {
-        sidebar.classList.remove("close", "hoverable");
-    });
+                </div>
+            </div>
+            </div>
+        </nav>
+        <!-- JavaScript -->
+        <script>
+        const body = document.querySelector("body");
+        const sidebar = document.querySelector(".sidebar");
+        const submenuItems = document.querySelectorAll(".submenu_item");
+        const sidebarOpen = document.querySelector("#sidebarOpen");
+        const sidebarClose = document.querySelector(".collapse_sidebar");
+        const sidebarExpand = document.querySelector(".expand_sidebar");
+        sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
 
-    sidebar.addEventListener("mouseenter", () => {
-        if (sidebar.classList.contains("hoverable")) {
-            sidebar.classList.remove("close");
-        }
-    });
-    sidebar.addEventListener("mouseleave", () => {
-        if (sidebar.classList.contains("hoverable")) {
-            sidebar.classList.add("close");
-        }
-    });
+        sidebarClose.addEventListener("click", () => {
+            sidebar.classList.add("close", "hoverable");
+        });
+        sidebarExpand.addEventListener("click", () => {
+            sidebar.classList.remove("close", "hoverable");
+        });
 
-    submenuItems.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("show_submenu");
-            submenuItems.forEach((item2, index2) => {
-                if (index !== index2) {
-                    item2.classList.remove("show_submenu");
-                }
+        sidebar.addEventListener("mouseenter", () => {
+            if (sidebar.classList.contains("hoverable")) {
+                sidebar.classList.remove("close");
+            }
+        });
+        sidebar.addEventListener("mouseleave", () => {
+            if (sidebar.classList.contains("hoverable")) {
+                sidebar.classList.add("close");
+            }
+        });
+
+        submenuItems.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                item.classList.toggle("show_submenu");
+                submenuItems.forEach((item2, index2) => {
+                    if (index !== index2) {
+                        item2.classList.remove("show_submenu");
+                    }
+                });
             });
         });
-    });
 
-    if (window.innerWidth < 768) {
-        sidebar.classList.add("close");
-    } else {
-        sidebar.classList.remove("close");
-    }
-    </script>
-</body>
+        if (window.innerWidth < 768) {
+            sidebar.classList.add("close");
+        } else {
+            sidebar.classList.remove("close");
+        }
+        </script>
+    </body>
 
-</html>
+    </html>

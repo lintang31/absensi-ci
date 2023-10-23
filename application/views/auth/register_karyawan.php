@@ -6,9 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!--<title>Registration Form in HTML CSS</title>-->
-    <!---Custom CSS File--->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
 /* Import Google font - Poppins */
@@ -59,6 +60,8 @@ body {
 }
 
 .form .input-box {
+    position: relative;
+    /* Tambahkan ini */
     width: 100%;
     margin-top: 20px;
 }
@@ -78,6 +81,16 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
+}
+
+/* Tambahkan gaya untuk ikon mata */
+.form .input-box .toggle-password {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #707070;
 }
 
 .input-box input:focus {
@@ -187,30 +200,42 @@ body {
                 <label>Username</label>
                 <input type="text" name="username" placeholder="username" required />
             </div>
-
             <div class="input-box">
-                <label>Email </label>
+                <label>Email</label>
                 <input type="text" name="email" placeholder="Email" required />
             </div>
             <div class="input-box">
-                <label>Nama Depan </label>
-                <input type="text" name="nama_depan" placeholder="Nama  Depan" required />
+                <label>Nama Depan</label>
+                <input type="text" name="nama_depan" placeholder="Nama Depan" required />
             </div>
             <div class="input-box">
-                <label>Nama Belakang </label>
+                <label>Nama Belakang</label>
                 <input type="text" name="nama_belakang" placeholder="Nama Belakang" required />
             </div>
             <div class="input-box">
-                <label>Password </label>
-                <input type="Password" name="password" placeholder="Password" required />
-                *Password Minimal 8 Karakter
-            </div>
+                <label>*Password Minimal 8 Karakter</label>
+                <input type="password" placeholder="Password" name="password" id="password" required />
+                <span class="fa fa-fw fa-eye-slash toggle-password" onclick="togglePassword()"></span>
             </div>
             <button type="submit">Submit</button>
             <div class="register_link">
-                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style=color:blue> Login</a>
-                </p>
+                <p>sudah punya akun?<a href='<?php echo base_url('auth'); ?>' style="color: blue;">Login</a></p>
             </div>
+            <script>
+            function togglePassword() {
+                var passwordField = document.getElementById("password");
+                var icon = document.querySelector(".toggle-password");
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye");
+                } else {
+                    passwordField.type = "password";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                }
+            }
+            </script>
         </form>
     </section>
 </body>
