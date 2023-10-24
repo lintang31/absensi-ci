@@ -65,14 +65,17 @@
                     <?php endif; ?>
                 </td>
                 <td>
-
-                    <a href="javascript:setHomeTime(<?php echo $i; ?>);" class="btn btn-warning <?php echo !empty(
-                                $row['keterangan_izin']
-                            )
-                                ? 'disabled'
-                                : ''; ?>">
+                    <?php if ($row['status'] !== 'true'): ?>
+                    <a href="<?php echo base_url(
+                    'employee/aksi_pulang/' . $row['id']
+                      ); ?>" class="btn btn-warning">
                         <i class="fa-solid fa-person-biking"></i>
                     </a>
+                    <?php else: ?>
+                    <button type="button" class="btn btn-secondary" disabled>
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                    <?php endif; ?>
                 </td>
 
                 <td><a href="<?php echo base_url('employee/ubah_absensi/') .

@@ -40,6 +40,29 @@ class M_model extends CI_Model
         return $this->db->affected_rows();
     }
 
+    function get_absensi_by_karyawan($id_karyawan)
+    {
+        $this->db->where('id_karyawan', $id_karyawan);
+        return $this->db->get('absensi')->result();
+    }
+
+    function get_absen($table, $id_karyawan)
+    {
+        return $this->db
+            ->where('id_karyawan', $id_karyawan)
+            ->where('keterangan_izin', 'masuk')
+            ->get($table);
+    }
+
+    function get_izin($table, $id_karyawan)
+    {
+        return $this->db
+            ->where('id_karyawan', $id_karyawan)
+            ->where('kegiatan', '-')
+            ->get($table);
+    }
+
+
     public function get_karyawan_rows()
     {
         return $this->db->get_where('user', ['role' => 'karyawan'])->num_rows();

@@ -31,10 +31,10 @@ class user_model extends CI_Model
     }
 
     // Fungsi untuk mendapatkan data pengguna berdasarkan ID
-    public function getuserByID($id)
+    public function getUserByID($id)
     {
         $this->db->select('*');
-        $this->db->from('user');
+        $this->db->from('User');
         $this->db->where('id', $id);
         $query = $this->db->get();
 

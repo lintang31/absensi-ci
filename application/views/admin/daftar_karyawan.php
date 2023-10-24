@@ -18,7 +18,6 @@ h2 {
 }
 
 .exp {
-    margin-top: 1%;
     margin-left: 29%;
 }
 
@@ -46,16 +45,16 @@ table {
 
 <body>
     <?php $this->load->view('./component/sidebar_admin'); ?>
-    <div class="comtainer-fluid ">
-        <div class="col-md-9 mx-2">
+    <div class="comtainer-fluid">
+        <div class="col-md-9">
             <h2>Daftar Karyawan</h2>
             <a class="exp btn btn-success mb-1" href="<?= base_url(
                 'admin/export_daftar_karyawan'
-            ) ?>">Export</a>
+            ) ?>"><i class="fa-solid fa-file-export"></i></a>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Nama</th>
                         <th>Email</th>
                     </tr>

@@ -175,25 +175,27 @@ body.dark {
 }
 
 .nav_link {
-    position: relative;
     font-size: 16px;
     min-width: 10px;
-    line-height: 30px;
-    display: inline-block;
-    text-align: center;
+    line-height: 40px;
+    display: flex;
+    /* Menggunakan flex untuk mengatur ikon dan teks secara horizontal */
+    align-items: center;
+    /* Mengatur ikon dan teks ke tengah secara vertikal */
     border-radius: 6px;
-    margin-right: 10px;
-    /* Atur jarak antara ikon dan teks di sini sesuai kebutuhan Anda */
+    gap: 10px;
+    /* Atur jarak antara ikon dan teks di sini */
 }
-
 
 .navlink_icon::before {
     content: "";
-    position: absolute;
-    height: 100%;
-    width: calc(100% + 100px);
-    left: -20px;
+    width: 20px;
+    /* Atur lebar ikon di sini */
+    height: 20px;
+    /* Atur tinggi ikon di sini */
 }
+
+
 
 .navlink_icon:hover {
     background: var(--blue-color);
@@ -352,6 +354,21 @@ body.dark {
                 <ul class="menu_items">
 
             </div>
+
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/dashboard'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-mug-hot"></i>Dashboard</a>
+
+            </ul>
+
+            <ul class="">
+                <a href="<?php echo base_url(
+                                'admin/history_absen'
+                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-handshake"></i>History Absen</a>
+
+            </ul>
+
 
             <ul class="">
                 <a href="<?php echo base_url(

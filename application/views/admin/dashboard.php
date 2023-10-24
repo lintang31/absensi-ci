@@ -38,6 +38,10 @@
         margin-top: 70px;
     }
 
+    .table {
+        margin-left: 5%;
+    }
+
     .row {
         margin-left: 0;
         /* Menghapus margin kiri */
@@ -53,30 +57,32 @@
 </style>
 
 <body>
-    <?php $this->load->view('./component/sidebar_karyawan'); ?>
+    <?php $this->load->view('./component/sidebar_admin'); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h6 class="card-title">Jumlah Masuk</h6>
-                        <h1>20</h1>
+
+                        <h6 class="card-title">Jumlah User</h6>
+                        <h1><?php echo $pengguna; ?></h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h6 class="card-title">Jumlah Izin</h6>
-                        <h1>10</h1>
+
+                        <h6 class="card-title">Jumlah Karyawan</h6>
+                        <h1><?php echo $karyawan; ?> </h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h6 class="card-title">Total Keseluruhan</h6>
-                        <h1>30</h1>
+                        <h6 class="card-title">Total Absen</h6>
+                        <h1><?php echo $absensi_num; ?></h1>
                     </div>
                 </div>
             </div>
@@ -94,7 +100,7 @@
             </thead>
             <tbody>
                 <?php $i = 1; ?>
-                <?php foreach ($absensi as $row): ?>
+                <?php foreach ($absen as $row): ?>
                 <tr>
                     <td><span class="number"><?php echo $i; ?></span></td>
                     <td><?php echo $row->kegiatan; ?></td>
@@ -112,20 +118,11 @@
                         <?= $row->keterangan_izin; ?>
                         <?php endif; ?>
                     </td>
-
                     <?php $i++; ?>
                     <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-</body>
-
-<tr>
-
-</tr>
-</tbody>
-</table>
-</div>
 </body>
 
 </html>

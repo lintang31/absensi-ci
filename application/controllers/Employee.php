@@ -58,7 +58,19 @@ class Employee extends CI_Controller
 
     public function dashboard()
     {
-        $this->load->view('employee/dashboard');
+        $id_karyawan = $this->session->userdata('id');
+        $data['absensi'] = $this->m_model->get_absensi_by_karyawan(
+            $id_karyawan
+        );
+        $data['absensi_count'] = count($data['absensi']);
+        $data['total_absen'] = $this->m_model
+            ->get_absen('absensi', $this->session->userdata('id'))
+            ->num_rows();
+        $data['total_izin'] = $this->m_model
+            ->get_izin('absensi', $this->session->userdata('id'))
+            ->num_rows();
+
+        $this->load->view('employee/dashboard', $data);
     }
 
     public function tambah_absen()
@@ -154,26 +166,16 @@ class Employee extends CI_Controller
         redirect('employee/history');
     }
 
-    public function pulang($id) {
-        $absensi = $this->Absensi_model->getAbsensiById($id);
-    
-        if ($absensi['status'] == 'false') {
-            date_default_timezone_set('Asia/Jakarta');
-            $data = array(
-                'jam_pulang' => date('H:i:s'),
-                'status' => 'true'
-            );
-        }
-    
-        $this->Absensi_model->updateStatusPulang($id, $data);
-    
-        // Kirim respons JSON untuk menampilkan status dan jam pulang
-        $response = array(
-            'status' => $data['status'],
-            'jam_pulang' => $data['jam_pulang']
-        );
-    
-        echo json_encode($response);
+    public function aksi_pulang($id)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $waktu_sekarang = date(' H:i:s');
+        $data = [
+            'jam_pulang' => $waktu_sekarang,
+            'status' => 'true',
+        ];
+        $this->m_model->update('absensi', $data, ['id' => $id]);
+        redirect(base_url('employee/history'));
     }
     
     public function history()

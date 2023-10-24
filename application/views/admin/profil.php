@@ -70,9 +70,9 @@ body {
                             <div class="d-flex justify-content-center mb-2">
                                 <a href="<?php echo base_url(
                                     'employee/akun'
-                                ); ?>" type="button" class="btn btn-primary"><i class="fa-solid fa-gear"></i></a>
+                                ); ?>" type="button" class="btn btn-warning"><i class="fa-solid fa-wrench"></i></a>
                                 <a href="javascript:void(0);" onclick="confirmLogout();" type="button"
-                                    class="btn btn-danger ms-1"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                    class="btn btn-danger ms-1"><i class="fa-solid fa-share"></i></a>
                             </div>
                         </div>
                     </div>

@@ -98,4 +98,26 @@ class Admin_model extends CI_Model {
 
         return $query->row();
     }
+
+    public function getAllKaryawan()
+    {
+        $this->db->select('*');
+        $this->db->from('User');
+        $this->db->where('role', 'karyawan');
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function getExportKaryawan()
+    {
+        $this->db->select(
+            'absensi.id, user.username, absensi.kegiatan, absensi.date, absensi.jam_masuk, absensi.jam_pulang, absensi.status'
+        );
+        $this->db->from('absensi');
+        $this->db->join('user', 'user.id = absensi.id_karyawan', 'left');
+        $query = $this->db->get();
+
+        return $query->result();
+    }
 }

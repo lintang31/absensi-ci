@@ -10,69 +10,78 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+    body {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        background-color: #fff;
+        margin-top: 50px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form label {
+        font-weight: bold;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="password"],
+    .form input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form .toggle-password,
+    .form .toggle-konfirmasi_password {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        cursor: pointer;
+    }
+
+    .form button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .form button:hover {
+        background-color: #0056b3;
+    }
+
+    .register_link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .register_link a {
+        color: blue;
+        text-decoration: none;
+    }
+
+    .register_link a:hover {
+        text-decoration: underline;
+    }
+    </style>
 </head>
-<style>
-.container {
-    margin-top: 50px;
-}
-
-.form label {
-    font-weight: bold;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form .toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 40px;
-    cursor: pointer;
-}
-
-.form button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.form button:hover {
-    background-color: #0056b3;
-}
-
-.register_link {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.register_link a {
-    color: blue;
-    text-decoration: none;
-}
-
-.register_link a:hover {
-    text-decoration: underline;
-}
-</style>
 
 <body>
     <div class="container">
         <h2 class="text-center mb-3">Ubah Akun</h2>
-        <form method="post" action="<?= base_url(
-            'employee/aksi_ubah_akun'
-        ) ?>" enctype="multipart/form-data" class="row g-3">
+        <form method="post" action="<?= base_url('employee/aksi_ubah_akun') ?>" enctype="multipart/form-data"
+            class="row g-3">
             <div class="col-12">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" name="username" class="form-control" id="inputAddress" placeholder=""
@@ -99,7 +108,6 @@
                         onclick="toggleKonfirmasiPassword()"></span>
                 </div>
             </div>
-
             <div class="col-md-6">
                 <label for="nama_depan" class="form-label">Nama Depan</label>
                 <input type="nama_depan" name="nama_depan" class="form-control" id="inputPassword4"
@@ -114,13 +122,13 @@
                 <label for="foto" class="form-label">Profil</label>
                 <input type="file" name="foto" class="form-control" id="foto">
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
         </form>
-        <div class="register_link">
-            <p>Sudah punya akun? <a href='<?php echo base_url('auth/register_karyawan'); ?>'
-                    style="color: blue;">Register</a></p>
+        <br>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="<?php echo base_url('admin/profil'); ?>" type="submit" class="btn btn-danger">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </a>
         </div>
     </div>
     <script>
@@ -155,3 +163,4 @@
 </body>
 
 </html>
+``
