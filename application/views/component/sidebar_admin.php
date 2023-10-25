@@ -171,6 +171,7 @@ body.dark {
 
 .menu_items {
     padding: 0;
+
     list-style: none;
 }
 
@@ -239,6 +240,7 @@ body.dark {
     display: inline-block;
     margin-right: auto;
 }
+
 
 .sidebar.close .submenu {
     display: none;
@@ -377,35 +379,39 @@ body.dark {
 
             </ul>
 
-            <ul class="">
-                <a href="<?php echo base_url(
-                                'admin/rekapPerHari'
-                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar-days"></i>Rekap Harian</a>
-            </ul>
+            <ul class="dropdown">
+                <a class="nav_link submenu_item ">
+                    <i class="fa-solid fa-bars"></i> Rekap
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="<?php echo base_url(
+                            'admin/rekapPerHari'
+                        ); ?>" class="nav_link">Rekap Harian</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url(
+                            'admin/rekapPerMinggu'
+                        ); ?>" class="nav_link"></i>Rekap Mingguan</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url(
+                            'admin/rekapPerBulan'
+                        ); ?>" class="nav_link">Rekap Bulanan</a>
+                    </li>
+                </ul>
+                </li>
+                <div class="bottom_content">
+                    <div class="bottom expand_sidebar">
+                        <span> Buka</span>
 
-            <ul class="">
-                <a href="<?php echo base_url(
-                                'admin/rekapPerMinggu'
-                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar"></i>Rekap Mingguan</a>
-            </ul>
+                    </div>
+                    <div class="bottom collapse_sidebar">
+                        <span>Tutup</span>
 
-            <ul class="">
-                <a href="<?php echo base_url(
-                                'admin/rekapPerBulan'
-                            ); ?>" class="nav_link sublink"><i class="fa-solid fa-calendar-week"></i>Rekap Bulanan</a>
-            </ul>
-            </li><!-- Sidebar Open / Close -->
-            <div class="bottom_content">
-                <div class="bottom expand_sidebar">
-                    <span> Buka</span>
-
+                    </div>
                 </div>
-                <div class="bottom collapse_sidebar">
-                    <span>Tutup</span>
-
                 </div>
-            </div>
-            </div>
         </nav>
         <!-- JavaScript -->
         <script>
