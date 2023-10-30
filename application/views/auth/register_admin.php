@@ -199,10 +199,8 @@ body {
         <header>Register Admin Form</header>
         <form action="<?php echo base_url('auth/process_register_admin'); ?>" method="post" class="form">
             <div class="input-box">
-                <label>Username</label>
                 <input type="text" name="username" placeholder="username" required />
             </div>
-
             <div class="input-box">
                 <label>Email </label>
                 <input type="text" name="email" placeholder="Email" required />
